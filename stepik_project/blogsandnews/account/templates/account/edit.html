@@ -1,0 +1,15 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Edit profile{% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>Edit your profile</h1>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ user_form.as_p }}<br>
+                {{ profile_form.as_p }}<br>
+                <button class="btn btn-success" type="submit">Save changes</button>
+            </form>
+    </div>
+{% endblock %}

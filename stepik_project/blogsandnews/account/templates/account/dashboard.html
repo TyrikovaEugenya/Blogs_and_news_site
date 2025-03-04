@@ -1,0 +1,12 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>Dashboard</h1>
+        <p>Welcome to your dashboard. You can <a href="{% url 'edit' %}">edit your profile</a>.
+        </p>
+        <a href="{% url 'password_change' %}"><button class="btn btn-warning">Change password</button></a>
+    </div>
+{% endblock %}
